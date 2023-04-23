@@ -10,9 +10,12 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"))
 
-const uri = process.env.ATLAS_URI;
+const uri = process.env.URI;
+console.log(uri)
 mongoose.connect(uri, { useNewUrlParser: true}
 );
+
+mongoose.set('strictQuery', true);
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
@@ -77,7 +80,7 @@ const teamSchema = mongoose.Schema({
 const eventDetails = mongoose.model("eventDetail", eventSchema);
 const teamScores = mongoose.model("teamScore", teamSchema);
 const password = mongoose.model("password", { password: { type: String } });
-var authCode = 6589;
+var authCode = 1010;
 
 
 teamScores.findOne({}, (err, data) => {
@@ -211,7 +214,7 @@ app.get("/login", (req, res) => {
 // Post on log in
 app.post("/login", (req, res) => {
     const passcode = req.body.password;
-    authCode = 6589;
+    authCode = 1010;
 
     
         if (authCode== passcode) {
