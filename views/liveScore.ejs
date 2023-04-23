@@ -27,8 +27,8 @@
               </tr>
             </thead>
             <tbody>
-              <% let i=0; let totalScore=0; liveScore.agniastra.forEach(score=> { i++; totalScore += score.score - 
-                score.penalty; %>
+              <% let i=0; let totalScore=0; liveScore.agniastra.forEach(score=> { i++; totalScore += score.score -score.penalty; %>
+                
                 <tr class="table-danger">
                   <th scope="row">
                     <%= i %>
@@ -80,8 +80,8 @@
               </tr>
             </thead>
             <tbody>
-              <% let j=0; totalScore=0; liveScore.nandiastra.forEach(score=> { j++; totalScore += score.score -
-                score.penalty; %>
+              <% let j=0; totalScore=0; liveScore.nandiastra.forEach(score=> { j++; totalScore += score.score - score.penalty; %>
+               
                 <tr class="table-success">
                   <th scope="row">
                     <%= j %>
@@ -133,8 +133,8 @@
               </tr>
             </thead>
             <tbody>
-              <% let k=0; totalScore=0; liveScore.vayuastra.forEach(score=> { k++; totalScore += score.score -
-                score.penalty; %>
+              <% let k=0; totalScore=0; liveScore.vayuastra.forEach(score=> { k++; totalScore += score.score -score.penalty; %>
+                
                 <tr class="table-warning">
                   <th scope="row">
                     <%= k %>
@@ -187,8 +187,8 @@
               </tr>
             </thead>
             <tbody>
-              <% let l=0; totalScore=0; liveScore.jalastra.forEach(score=> { l++; totalScore += score.score -
-                score.penalty; %>
+              <% let l=0; totalScore=0; liveScore.jalastra.forEach(score=> { l++; totalScore += score.score -score.penalty; %>
+                
                 <tr class="table-primary">
                   <th scope="row">
                     <%= l %>
